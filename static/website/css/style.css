@@ -405,11 +405,11 @@ ul {
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 2px;
-  background-color: #80daeb;
+  background-color: ;
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  border: 2px solid #80daeb; }
+  border: 2px solid #0c0c0c; }
   @media only screen and (max-width: 767px) {
     .dento-btn {
       min-width: 120px;
@@ -421,10 +421,10 @@ ul {
   .dento-btn.active, .dento-btn:focus, .dento-btn:hover {
     box-shadow: none;
     background-color: transparent;
-    color: #80daeb; }
+    color: #0c0c0c; }
   .dento-btn.btn-2:focus, .dento-btn.btn-2:hover {
     background-color: #ffffff;
-    color: #80daeb; }
+    color: #0c0c0c; }
   .dento-btn.booking-btn {
     color: #ffffff !important;
     font-weight: 600;
@@ -436,7 +436,7 @@ ul {
       font-size: 12px;
       font-weight: 600;
       background-color: #ffffff;
-      color: #80daeb !important; }
+      color: #0c0c0c !important; }
 
 .header-area {
   position: relative;
