@@ -135,8 +135,8 @@ ul {
     left: 0;
     z-index: -1;
     background: #808080;
-    background: -webkit-linear-gradient(to right, #808080, #00012c);
-    background: linear-gradient(to right, #808080, #00012c);
+    background: -webkit-linear-gradient(to right, #808080, #000000);
+    background: linear-gradient(to right, #808080, #000000);
     opacity: 0.85; }
 
 .bg-img {
