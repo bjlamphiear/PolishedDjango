@@ -134,9 +134,9 @@ ul {
     top: 0;
     left: 0;
     z-index: -1;
-    background: #2c455d;
-    background: -webkit-linear-gradient(to right, #2c455d, #00012c);
-    background: linear-gradient(to right, #2c455d, #00012c);
+    background: #808080;
+    background: -webkit-linear-gradient(to right, #808080, #00012c);
+    background: linear-gradient(to right, #808080, #00012c);
     opacity: 0.85; }
 
 .bg-img {
