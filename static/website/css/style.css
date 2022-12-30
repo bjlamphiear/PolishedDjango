@@ -403,13 +403,13 @@ ul {
   padding: 0 20px;
   text-align: center;
   text-transform: uppercase;
-  color: #c8d6c9;
+  color: #ffffff;
   border-radius: 2px;
-  background-color: #0c0c0c;
+  background-color: #c8d6c9;
   -webkit-transition: all 500ms;
   -o-transition: all 500ms;
   transition: all 500ms;
-  border: 2px solid #0c0c0c; }
+  border: 2px solid #c8d6c9; }
   @media only screen and (max-width: 767px) {
     .dento-btn {
       min-width: 120px;
