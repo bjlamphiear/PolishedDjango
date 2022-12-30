@@ -421,10 +421,10 @@ ul {
   .dento-btn.active, .dento-btn:focus, .dento-btn:hover {
     box-shadow: none;
     background-color: transparent;
-    color: #0c0c0c; }
+    color: #c8d6c9; }
   .dento-btn.btn-2:focus, .dento-btn.btn-2:hover {
     background-color: #ffffff;
-    color: #0c0c0c; }
+    color: #c8d6c9; }
   .dento-btn.booking-btn {
     color: #ffffff !important;
     font-weight: 600;
@@ -436,7 +436,7 @@ ul {
       font-size: 12px;
       font-weight: 600;
       background-color: #ffffff;
-      color: #0c0c0c !important; }
+      color: #c8d6c9 !important; }
 
 .header-area {
   position: relative;
@@ -900,7 +900,7 @@ ul {
     position: relative;
     width: 0;
     height: 100%;
-    background: #333;
+    background: #333333;
     z-index: 1; }
   .barfiller .tipWrap {
     display: none; }
