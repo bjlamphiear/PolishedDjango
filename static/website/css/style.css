@@ -41,7 +41,7 @@ Last Update: Dec 05, 2018
   $white: #ffffff; [White Color]
   $dark: #000; [Dark Color]
   $border: #7450fe; [Border Color]
-  $hover: #598681; [Hover Color]
+  $hover: #c8d6c9; [Hover Color]
   $footer: #191c1d; [Footer Color]
   $secondary: #222222; [Secondary Color]
 
@@ -166,7 +166,7 @@ ul {
   top: 0;
   width: 30px;
   height: 30px;
-  background-color: #598681;
+  background-color: #c8d6c9;
   text-align: center;
   right: 0;
   padding-right: 0;
@@ -299,7 +299,7 @@ ul {
     border: 3px;
     border-style: solid;
     border-color: transparent;
-    border-top-color: #598681;
+    border-top-color: #c8d6c9;
     -webkit-animation: dentorotate 2400ms linear infinite;
     animation: dentorotate 2400ms linear infinite;
     z-index: 999; }
@@ -314,7 +314,7 @@ ul {
       border: 3px;
       border-style: solid;
       border-color: transparent;
-      border-top-color: #598681;
+      border-top-color: #c8d6c9;
       -webkit-animation: dentorotate 2700ms linear infinite;
       animation: dentorotate 2700ms linear infinite; }
     #preloader #dento-load:after {
@@ -328,7 +328,7 @@ ul {
       border: 3px;
       border-style: solid;
       border-color: transparent;
-      border-top-color: #598681;
+      border-top-color: #c8d6c9;
       -webkit-animation: dentorotate 1800ms linear infinite;
       animation: dentorotate 1800ms linear infinite; }
 
@@ -368,7 +368,7 @@ ul {
   .section-heading .line {
     width: 70px;
     height: 4px;
-    background-color: #598681; }
+    background-color: #c8d6c9; }
   .section-heading.text-center .line {
     margin: 0 auto; }
   .section-heading.white h2 {
@@ -380,7 +380,7 @@ ul {
   line-height: 42px;
   right: 0;
   width: 40px;
-  background-color: #598681;
+  background-color: #c8d6c9;
   color: #ffffff;
   text-align: center;
   height: 40px;
@@ -465,7 +465,7 @@ ul {
     font-size: 12px;
     color: #707070; }
     .top-header-area .top-header-content a i {
-      color: #598681;
+      color: #c8d6c9;
       margin-right: 5px; }
     .top-header-area .top-header-content a:last-child {
       margin-left: 30px; }
@@ -481,7 +481,7 @@ ul {
     font-size: 14px;
     margin-left: 10px; }
     .top-header-area .top-header-social-info a:focus, .top-header-area .top-header-social-info a:hover {
-      color: #598681; }
+      color: #c8d6c9; }
 
 .classy-nav-container {
   background-color: transparent; }
@@ -504,7 +504,7 @@ ul {
       font-size: 14px;
       text-transform: uppercase; }
       .classy-nav-container .classy-navbar .classynav ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li a:hover {
-        color: #598681; }
+        color: #c8d6c9; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .classy-nav-container .classy-navbar .classynav ul li a {
           padding: 0 10px;
@@ -680,10 +680,10 @@ ul {
         font-size: 14px;
         text-align: center;
         line-height: 40px;
-        color: #598681;
+        color: #c8d6c9;
         margin: 0 7px; }
         .single-dentist-area .dentist-content .dentist-social-info a:focus, .single-dentist-area .dentist-content .dentist-social-info a:hover {
-          background-color: #598681;
+          background-color: #c8d6c9;
           color: #ffffff; }
     .single-dentist-area .dentist-content .dentist-info {
       width: 100%;
@@ -736,7 +736,7 @@ ul {
   z-index: 1; }
   .dento-price-table table thead tr > td,
   .dento-price-table table thead tr > th {
-    background-color: #a3c0bd;
+    background-color: #c8d6c9;
     color: #ffffff; }
   .dento-price-table table tr > td,
   .dento-price-table table tr > th {
@@ -770,7 +770,7 @@ ul {
       .single-service h6 {
         font-size: 13px; } }
   .single-service:focus h6, .single-service:hover h6 {
-    color: #598681; }
+    color: #c8d6c9; }
 
 .single-service--area {
   position: relative;
@@ -813,7 +813,7 @@ ul {
     width: 60px;
     height: 60px;
     color: #ffffff;
-    background-color: #598681;
+    background-color: #c8d6c9;
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -859,7 +859,7 @@ ul {
   z-index: 1; }
   .single-cta i {
     font-size: 50px;
-    color: #598681;
+    color: #c8d6c9;
     margin-bottom: 15px;
     display: block; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -964,7 +964,7 @@ ul {
     .breadcumb--con .breadcrumb .breadcrumb-item > a:hover,
     .breadcumb--con .breadcrumb .breadcrumb-item.active:focus,
     .breadcumb--con .breadcrumb .breadcrumb-item.active:hover {
-      color: #598681; }
+      color: #c8d6c9; }
   .breadcumb--con .breadcrumb .breadcrumb-item.active {
     color: #707070; }
     .breadcumb--con .breadcrumb .breadcrumb-item.active:focus, .breadcumb--con .breadcrumb .breadcrumb-item.active:hover {
@@ -993,7 +993,7 @@ ul {
       display: block;
       margin-bottom: 10px; }
       .single-blog-item .blog-content .post-title:focus, .single-blog-item .blog-content .post-title:hover {
-        color: #598681; }
+        color: #c8d6c9; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         .single-blog-item .blog-content .post-title {
           font-size: 16px; } }
@@ -1004,11 +1004,11 @@ ul {
       color: #b7b7b7;
       margin-right: 15px; }
       .single-blog-item .blog-content .post-meta a i {
-        color: #598681; }
+        color: #c8d6c9; }
       .single-blog-item .blog-content .post-meta a:last-child {
         margin-right: 0; }
       .single-blog-item .blog-content .post-meta a:focus, .single-blog-item .blog-content .post-meta a:hover {
-        color: #598681; }
+        color: #c8d6c9; }
   .single-blog-item.style-2 {
     box-shadow: none; }
     .single-blog-item.style-2 .blog-content,
@@ -1042,12 +1042,12 @@ ul {
     color: #707070;
     font-size: 16px; }
     .dento-pagination .pagination .page-item .page-link:focus, .dento-pagination .pagination .page-item .page-link:hover {
-      background-color: #598681;
-      border-color: #598681;
+      background-color: #c8d6c9;
+      border-color: #c8d6c9;
       color: #ffffff; }
   .dento-pagination .pagination .page-item.active .page-link {
-    background-color:#598681;
-    border-color: #598681;
+    background-color:#c8d6c9;
+    border-color: #c8d6c9;
     color: #ffffff; }
 
 .comment_area {
@@ -1100,7 +1100,7 @@ ul {
           .comment_area .comment-content .comment-meta .post-author span {
             font-size: 10px; } }
       .comment_area .comment-content .comment-meta .post-author:focus, .comment_area .comment-content .comment-meta .post-author:hover {
-        color: #598681; }
+        color: #c8d6c9; }
     .comment_area .comment-content .comment-meta p {
       margin-bottom: 15px;
       font-size: 14px;
@@ -1119,7 +1119,7 @@ ul {
         .comment_area .comment-content .comment-meta .comment-reply {
           font-size: 12px; } }
       .comment_area .comment-content .comment-meta .comment-reply:focus, .comment_area .comment-content .comment-meta .comment-reply:hover {
-        color: #598681; }
+        color: #c8d6c9; }
   .comment_area .children {
     margin-left: 50px; }
     .comment_area .children .single_comment_area:last-of-type {
@@ -1144,7 +1144,7 @@ ul {
     padding: 0 20px; }
     .search-widget form .form-control:focus {
       box-shadow: none;
-      border-color: #598681; }
+      border-color: #c8d6c9; }
   .search-widget form button {
     position: absolute;
     width: auto;
@@ -1172,7 +1172,7 @@ ul {
       .catagories-list li a {
         font-size: 14px; } }
     .catagories-list li a:focus, .catagories-list li a:hover {
-      color: #598681; }
+      color: #c8d6c9; }
   .catagories-list li:last-child a {
     border-bottom: none; }
 
@@ -1197,7 +1197,7 @@ ul {
       margin-bottom: 5px;
       font-weight: 600; }
       .single-news-area .blog-content .post-title:focus, .single-news-area .blog-content .post-title:hover {
-        color: #598681; }
+        color: #c8d6c9; }
     .single-news-area .blog-content .post-date {
       color: #b7b7b7;
       display: block;
@@ -1225,11 +1225,11 @@ ul {
       color: #b7b7b7;
       margin-right: 15px; }
       .blog-details-area .post-meta a i {
-        color: #598681; }
+        color: #c8d6c9; }
       .blog-details-area .post-meta a:last-child {
         margin-right: 0; }
       .blog-details-area .post-meta a:focus, .blog-details-area .post-meta a:hover {
-        color: #598681; }
+        color: #c8d6c9; }
   .blog-details-area p {
     margin-bottom: 30px;
     font-weight: 500; }
@@ -1262,7 +1262,7 @@ ul {
     font-size: 18px; }
     .dento-blockquote .text h6 span {
       font-size: 12px;
-      color: #598681; }
+      color: #c8d6c9; }
     @media only screen and (max-width: 767px) {
       .dento-blockquote .text h6 {
         font-size: 16px; } }
@@ -1272,7 +1272,7 @@ ul {
   width: 120px;
   height: 46px;
   border-radius: 3px;
-  background-color: #598681;
+  background-color: #c8d6c9;
   line-height: 46px;
   color: #ffffff;
   margin-right: 10px;
@@ -1389,7 +1389,7 @@ ul {
       .single-footer-widget .footer-contact p i {
         display: inline-block;
         margin-right: 5px;
-        color: #598681; }
+        color: #c8d6c9; }
       .single-footer-widget .footer-contact p:last-child {
         margin-bottom: 0; }
   .single-footer-widget .opening-hours {
@@ -1429,7 +1429,7 @@ ul {
         margin-bottom: 17px;
         display: block; }
         .single-footer-widget .quick-links li a:focus, .single-footer-widget .quick-links li a:hover {
-          color: #598681; }
+          color: #c8d6c9; }
       .single-footer-widget .quick-links li:last-child a {
         margin-bottom: 0; }
   .single-footer-widget .footer-newsletter-form {
@@ -1448,7 +1448,7 @@ ul {
     .single-footer-widget .footer-newsletter-form button {
       width: auto;
       padding: 0 15px;
-      background-color: #598681;
+      background-color: #c8d6c9;
       color: #ffffff;
       border: none;
       border-radius: 0 2px 2px 0;
@@ -1506,7 +1506,7 @@ ul {
   position: relative;
   z-index: 1;
   padding: 30px 50px;
-  background-color: #598681;
+  background-color: #c8d6c9;
   border-radius: 3px; }
   @media only screen and (max-width: 767px) {
     .contact-information {
@@ -1527,7 +1527,7 @@ ul {
     font-style: italic; }
     .contact-form .form-control:focus {
       box-shadow: none;
-      border-color: #598681; }
+      border-color: #c8d6c9; }
   .contact-form textarea.form-control {
     height: 110px;
     padding: 15px; }
