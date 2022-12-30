@@ -389,7 +389,7 @@ ul {
   transition-duration: 500ms;
   border-radius: 2px 0 0 2px; }
   #scrollUp:focus, #scrollUp:hover {
-    background-color: #000; }
+    background-color: #000000; }
 
 .dento-btn {
   position: relative;
@@ -403,7 +403,7 @@ ul {
   padding: 0 20px;
   text-align: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #c8d6c9;
   border-radius: 2px;
   background-color: #0c0c0c;
   -webkit-transition: all 500ms;
@@ -426,7 +426,7 @@ ul {
     background-color: #ffffff;
     color: #c8d6c9; }
   .dento-btn.booking-btn {
-    color: #ffffff !important;
+    color: #c8d6c9 !important;
     font-weight: 600;
     min-width: 140px;
     height: 40px;
