@@ -161,13 +161,16 @@
 
   if ($.fn.barfiller) {
     $('#bar1').barfiller({
-      barColor: '#00aeef'
+      barColor: '#c8d6c9'
     });
     $('#bar2').barfiller({
-      barColor: '#00aeef'
+      barColor: '#c8d6c9'
     });
     $('#bar3').barfiller({
-      barColor: '#00aeef'
+      barColor: '#c8d6c9'
+    });
+    $('#bar4').barfiller({
+      barColor: '#c8d6c9'
     });
   }
 
