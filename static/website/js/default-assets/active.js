@@ -30,7 +30,7 @@
       items: 1,
       loop: true,
       autoplay: true,
-      smartSpeed: 13000,
+      smartSpeed: 1000,
       nav: true,
       navText: ["<i class='ti-angle-left'</i>", "<i class='ti-angle-right'</i>"],
       dots: true,
