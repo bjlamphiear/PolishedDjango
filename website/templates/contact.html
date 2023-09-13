@@ -69,39 +69,83 @@
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="col-12 col-md-8">
-          <div class="contact-form">
-            <!-- Section Heading -->
-            <div class="section-heading">
-              <h2>Get In Touch </h2>
-              <div class="line"></div>
-            </div>
-            <!-- Form -->
-            <form action="{% url 'contact' %}" method="post">
+<!-- Book An Oppointment Area Start -->
+  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center white">
+            <h2>Book An Apointment</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <!-- Appointment Form -->
+          <div class="appointment-form">
+            <form action="{% url 'appointment' %}" method="post">
               {% csrf_token %}
               <div class="row">
-                <div class="col-lg-6">
-                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                  <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <select name="your-schedule" class="form-control">
+                      <option value="Choose Your Schedule">Choose Your Schedule</option>
+                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
+                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
+                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
+                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-30">
+                    <select name="your-date" class="form-control">
+                      <option value="Choose Your Date">Choose Your Date</option>
+                      <option value="Monday">Monday</option>
+                      <option value="Tuesday">Tuesday</option>
+                      <option value="Wednesday">Wednesday</option>
+                      <option value="Thursday">Thursday</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="col-12">
-                  <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                  <div class="form-group mb-30">
+                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
+                  </div>
                 </div>
-                <div class="col-12">
-                  <button type="submit" class="btn dento-btn">Send Message</button>
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn dento-btn">Booking Now</button>
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>
     </div>
   </section>
-  {% endif %}
-  <!-- ***** Contact Area End ***** -->
+  <!-- Book An Oppointment Area End -->
 
   {% endblock %}
