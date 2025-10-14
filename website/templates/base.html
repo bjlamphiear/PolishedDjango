@@ -4,17 +4,44 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="{% block meta_description %}Polished - Mobile Dental Hygiene Services{% endblock %}">
+  <meta name="description" content="{% block meta_description %}Mobile dental hygiene services in Fairfield, CA. We bring professional care directly to your door.{% endblock %}">
+  <meta name="keywords" content="mobile dental hygiene, Fairfield CA, RDHAP, teeth cleaning, dental care at home">
+  <meta name="author" content="Polished RDHAP">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="robots" content="index, follow">
 
   <title>{% block title %}Polished - Mobile Dental Hygiene Services{% endblock %}</title>
 
-  <link rel="icon" href="{% static 'website/img/core-img/LogoA55.png' %}">
-  <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Polished - Mobile Dental Hygiene Services">
+  <meta property="og:description" content="We bring professional dental care directly to your home in Fairfield, CA.">
+  <meta property="og:image" content="https://polishedrdhap.com/static/website/img/core-img/LogoA55.png">
+  <meta property="og:url" content="https://polishedrdhap.com">
+  <meta property="og:type" content="website">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Structured Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Polished RDHAP",
+    "image": "https://polishedrdhap.com/static/website/img/core-img/LogoA55.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2928 Hearst Court",
+      "addressLocality": "Fairfield",
+      "addressRegion": "CA",
+      "postalCode": "94534",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-707-290-7861",
+    "url": "https://polishedrdhap.com",
+    "description": "Mobile dental hygiene services in Fairfield, CA."
+  }
+  </script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1SJ96Y383"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,8 +49,10 @@
     gtag('js', new Date());
     gtag('config', 'G-E1SJ96Y383');
   </script>
-</head>
 
+  <link rel="icon" href="{% static 'website/img/core-img/LogoA55.png' %}">
+  <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+</head>
 
 <body>
   <!-- Preloader -->
@@ -33,9 +62,8 @@
     </div>
   </div>
 
-  <!-- ***** Header Area Start ***** -->
+  <!-- Header -->
   <header class="header-area">
-    <!-- Top Header Area -->
     <div class="top-header-area">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
@@ -49,25 +77,18 @@
       </div>
     </div>
 
-    <!-- Main Header Area -->
     <div class="main-header-area">
       <div class="classy-nav-container">
         <div class="container">
           <nav class="classy-navbar justify-content-between" id="dentoNav">
-            <!-- Logo -->
             <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'website/img/core-img/Logo_152_40.png' %}" alt="Polished Logo"></a>
-
-            <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
               <span class="navbarToggler"><span></span><span></span><span></span></span>
             </div>
-
-            <!-- Menu -->
             <div class="classy-menu">
               <div class="classycloseIcon">
                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
               </div>
-
               <div class="classynav">
                 <ul id="nav">
                   <li><a href="{% url 'home' %}">Home</a></li>
@@ -78,24 +99,20 @@
                 </ul>
               </div>
             </div>
-
-            <!-- Booking Button -->
             <a href="{% url 'contact' %}" class="btn dento-btn booking-btn">Book Here</a>
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
 
   {% block content %}
   {% endblock %}
 
-  <!-- ***** Footer Area Start ***** -->
+  <!-- Footer -->
   <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
     <div class="container">
       <div class="row">
-        <!-- Contact Info -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
             <a href="{% url 'home' %}" class="d-block mb-4"><img src="{% static 'website/img/core-img/logoA.png' %}" alt="Polished Logo"></a>
@@ -107,8 +124,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Opening Hours -->
         <div class="col-12 col-sm-6 col-lg">
           <div class="single-footer-widget">
             <h5 class="widget-title">Opening Hours</h5>
@@ -124,7 +139,6 @@
       </div>
     </div>
 
-    <!-- Copywrite Area -->
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -135,7 +149,6 @@
       </div>
     </div>
   </footer>
-  <!-- ***** Footer Area End ***** -->
 
   <!-- JS Scripts -->
   <script src="{% static 'website/js/jquery.min.js' %}"></script>
