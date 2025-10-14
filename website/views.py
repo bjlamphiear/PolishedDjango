@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
+from django.conf import settings
 from .forms import ContactForm, AppointmentForm  # ✅ Import both forms
 
 # ✅ Static pages
@@ -29,12 +30,16 @@ def contact(request):
             )
             return render(request, 'contact.html', {
                 'message_name': cd['name'],
-                'form': ContactForm()  # Reset form after success
+                'form': ContactForm(),  # Reset form after success
+                'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
             })
     else:
         form = ContactForm()
 
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact.html', {
+        'form': form,
+        'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
+    })
 
 # ✅ Appointment form with reCAPTCHA and review page
 def appointment(request):
@@ -70,8 +75,14 @@ def appointment(request):
                 'your_message': cd['your_message'],
             })
         else:
-            return render(request, 'appointment.html', {'form': form})
+            return render(request, 'appointment.html', {
+                'form': form,
+                'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
+            })
     else:
         form = AppointmentForm()
 
-    return render(request, 'appointment.html', {'form': form})
+    return render(request, 'appointment.html', {
+        'form': form,
+        'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
+    })
