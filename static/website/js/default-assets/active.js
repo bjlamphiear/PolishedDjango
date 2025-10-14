@@ -20,25 +20,28 @@
     $('#dentoNav').classyNav();
   }
 
-  // ***********************************
+// ***********************************
 // :: 3.0 Welcome Carousel Active Code
 // ***********************************
 
 if ($.fn.owlCarousel) {
   var welcomeSlider = $('.welcome-slides');
+
   welcomeSlider.owlCarousel({
     items: 1,
     loop: true,
     autoplay: true,
     autoplayTimeout: 8000,       // ✅ 8 seconds per slide
     smartSpeed: 1000,            // ✅ 1 second transition
+    startPosition: 0,            // ✅ Always start on first slide
     nav: true,
-    navText: ["<i class='ti-angle-left'</i>", "<i class='ti-angle-right'</i>"],
+    navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"],
     dots: true,
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   });
 
+  // Reset animations before slide transition
   welcomeSlider.on('translate.owl.carousel', function () {
     var layer = $("[data-animation]");
     layer.each(function () {
@@ -47,16 +50,19 @@ if ($.fn.owlCarousel) {
     });
   });
 
+  // Apply animation delays
   $("[data-delay]").each(function () {
     var anim_del = $(this).data('delay');
     $(this).css('animation-delay', anim_del);
   });
 
+  // Apply animation durations
   $("[data-duration]").each(function () {
     var anim_dur = $(this).data('duration');
     $(this).css('animation-duration', anim_dur);
   });
 
+  // Trigger animations after slide transition
   welcomeSlider.on('translated.owl.carousel', function () {
     var layer = welcomeSlider.find('.owl-item.active').find("[data-animation]");
     layer.each(function () {
@@ -65,6 +71,7 @@ if ($.fn.owlCarousel) {
     });
   });
 }
+
 
   // **************************************
   // :: 4.0 Testimonials Slides Active Code
