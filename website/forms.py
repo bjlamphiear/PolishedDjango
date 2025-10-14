@@ -31,7 +31,7 @@ class AppointmentForm(forms.Form):
     your_message = forms.CharField(required=False, widget=forms.Textarea(attrs={
         'class': 'form-control', 'placeholder': 'Your Message'
     }))
-    captcha = ReCaptchaField(widget=ReCaptchaV3)
+    captcha = ReCaptchaField(widget=ReCaptchaV3(action='submit'))  # ✅ Action explicitly set
 
 # ✅ Contact Form
 class ContactForm(forms.Form):
@@ -44,4 +44,4 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(attrs={
         'class': 'form-control', 'placeholder': 'Your Message'
     }))
-    captcha = ReCaptchaField(widget=ReCaptchaV3)
+    captcha = ReCaptchaField(widget=ReCaptchaV3(action='submit'))  # ✅ Action explicitly set
