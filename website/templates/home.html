@@ -135,9 +135,10 @@
 </section>
 <!-- ***** Book an Appointment Section End ***** -->
 
-<!-- ***** Carousel Speed Script ***** -->
+<!-- ***** Carousel Speed Override Script ***** -->
 <script>
-  $(document).ready(function(){
+  setTimeout(function() {
+    $(".welcome-slides").trigger('destroy.owl.carousel');
     $(".welcome-slides").owlCarousel({
       items: 1,
       loop: true,
@@ -148,7 +149,7 @@
       dots: true,
       nav: false
     });
-  });
+  }, 500); // Delay to override theme defaults
 </script>
 
 {% endblock %}
