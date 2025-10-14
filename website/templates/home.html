@@ -138,12 +138,14 @@
   window.addEventListener('load', function () {
     const $carousel = $('.welcome-slides');
 
-    // Wait until Owl Carousel is initialized
+    // Fully destroy and remove Owl markup
     if ($carousel.data('owl.carousel')) {
       $carousel.trigger('destroy.owl.carousel');
+      $carousel.removeClass('owl-loaded owl-carousel owl-drag');
+      $carousel.find('.owl-stage-outer, .owl-stage, .owl-item, .owl-nav, .owl-dots').remove();
     }
 
-    // Reinitialize with your settings
+    // Reinitialize with clean settings
     $carousel.owlCarousel({
       items: 1,
       loop: true,
