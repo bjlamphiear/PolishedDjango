@@ -1,624 +1,154 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{%block content %}
+{% block content %}
 
-
-
-
-  <!-- ***** Welcome Area Start ***** -->
-  <section class="welcome-area">
-    <!-- Welcome Slides -->
-    <div class="welcome-slides owl-carousel">
-      <!-- Single Welcome Slide -->
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/Dental1_BlackW.png' %});">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-12">
-              <!-- Welcome Text -->
-              <div class="welcome-text text-center">
-                <h2 data-animation="fadeInUp" data-delay="100ms">Oral Health Care for Everyone....Anywhere</h2>
-                <p data-animation="fadeInUp" data-delay="300ms"> </p>
-                <div class="welcome-btn-group">
-                  <a href="{% url 'contact' %}" class="btn dento-btn mx-2" data-animation="fadeInUp" data-delay="700ms">Contact Us</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Single Welcome Slide --> 
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/Elderly_BlackW.png' %});">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-12">
-              <!-- Welcome Text -->
-              <div class="welcome-text text-center">
-                <h2 data-animation="fadeInDown" data-delay="100ms"> Oral Health Care for Everyone....Anywhere</h2>
-                <p data-animation="fadeInDown" data-delay="300ms"> </p>
-                <div class="welcome-btn-group">
-                  <a href="{% url 'contact' %}" class="btn dento-btn mx-2 active" data-animation="fadeInDown" data-delay="700ms">Contact Us</a>
-                </div>
+<!-- ***** Welcome Area Start ***** -->
+<section class="welcome-area">
+  <div class="welcome-slides owl-carousel">
+    <!-- Slide 1 -->
+    <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/Dental1_BlackW.png' %});">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="welcome-text text-center">
+              <h2>Oral Health Care for Everyone... Anywhere</h2>
+              <div class="welcome-btn-group">
+                <a href="{% url 'contact' %}" class="btn dento-btn mx-2" aria-label="Contact Us">Contact Us</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- ***** Welcome Area End ***** -->
 
-  <!-- ****** About Us Area Start ******* -->
-  <section class="dento-about-us-area section-padding-100-0">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- About Us Thumbnail -->
-        <div class="col-12 col-md-6">
-          <div class="about-us-thumbnail mb-50">
-            <img src="{% static 'website/img/bg-img/Elderly3_BlackW.png' %}" alt="">
-          </div>
-        </div>
-        <!-- About Content -->
-        <div class="col-12 col-md-6">
-          <div class="about-us-content mb-50">
-            <!-- Section Heading -->
-            <div class="section-heading">
-              <h2>Our Mission</h2>
-              <div class="line"></div>
-            </div>
-            <p>At Polished our mission is to provide high level oral hygiene care to everyone. Oral health is directly associated to overall health. The population of patients who are not able to be seen in a dental office continues to grow but access is no longer a barrier to good dental hygiene care. Whether its cleaning teeth, educating care givers with tips and tricks or even simply helping brush a patient's teeth, we are here for you.</p>
-            <p> *In a recent study involving community dwelling seniors: </p>
-
-            <!-- Single Skills Area -->
-            <div class="single-skills-area mt-30">
-              <h6>Untreated Tooth Decay</h6>
-              <div id="bar1" class="barfiller">
-                <span class="tip"></span>
-                <span class="fill" data-percentage="32"></span>
+    <!-- Slide 2 -->
+    <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/Elderly_BlackW.png' %});">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12">
+            <div class="welcome-text text-center">
+              <h2>Bringing Oral Health to Every Home</h2>
+              <div class="welcome-btn-group">
+                <a href="{% url 'contact' %}" class="btn dento-btn mx-2 active" aria-label="Contact Us">Contact Us</a>
               </div>
             </div>
-
-            <!-- Single Skills Area -->
-            <div class="single-skills-area mt-30">
-              <h6>1-6 Remaining Natural Teeth</h6>
-              <div id="bar3" class="barfiller">
-                <span class="tip"></span>
-                <span class="fill" data-percentage="6.8"></span>
-              </div>
-            </div>
-
-            <!-- Single Skills Area -->
-            <div class="single-skills-area mt-30">
-              <h6>Untreated Gum Disease</h6>
-              <div id="bar2" class="barfiller">
-                <span class="tip"></span>
-                <span class="fill" data-percentage="65"></span>
-              </div>
-            </div>  
-            <p> *centerfororalhealth.org </p>        
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- ****** About Us Area End ****** -->
-
-  <div class="container">
-    <div class="dento-border clearfix"></div>
   </div>
+</section>
+<!-- ***** Welcome Area End ***** -->
 
-  <!-- Cool Facts Area Start -->
-  <section class="dento-cta-area">
-    <div class="container">
-      <div class="row">
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_genius"></i>
-            <h2><span class="counter">10</span></h2>
-            <h5>Years Of Experience</h5>
-          </div>
-        </div>
-
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_heart_alt"></i>
-            <h2><span class="counter">1400</span>+</h2>
-            <h5>Happy Patients</h5>
-          </div>
-        </div>
-
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_book_alt"></i>
-            <h2><span class="counter">240</span></h2>
-            <h5>Community Service Hours</h5>
-          </div>
-        </div>
-
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_id"></i>
-            <h2><span class="counter">1,840</span>+</h2>
-            <h5>Miles Traveled </h5>
-          </div>
+<!-- ***** About Us Area Start ***** -->
+<section class="dento-about-us-area section-padding-100-0">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6">
+        <div class="about-us-thumbnail mb-50">
+          <img src="{% static 'website/img/bg-img/Elderly3_BlackW.png' %}" alt="Elderly patient receiving care">
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Cool Facts Area End -->
-
-  <!-- Dento Service Area Start -->
-  <section class="dento-service-area section-padding-100-0 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child1_BlackW.png' %});">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Service Content -->
-        <div class="col-12 col-lg-6">
-          <div class="service-content mb-30">
-            <!-- Section Heading -->
-            <div class="section-heading white">
-              <h2>Our Services</h2>
-              <div class="line"></div>
-            </div>
-
-
-            <div class="row">
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s1.png' %}" alt="">
-                  <h6>New Patient Appointment</h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s2.png' %}" alt="">
-                  <h6>Teeth Cleaning </h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s3.png' %}" alt="">
-                  <h6>Silver Diammine Fluoride</h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s4.png' %}" alt="">
-                  <h6>Oral Cancer Screening </h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s5.png' %}" alt="">
-                  <h6>Patient Specific Oral hygiene Instruction</h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s1.png' %}" alt="">
-                  <h6>Deep Cleaning</h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s1.png' %}" alt="">
-                  <h6>Denture Cleaning</h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s1.png' %}" alt="">
-                  <h6>Topical Fluoride Application</h6>
-                </div>
-              </div>
-
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="{% static 'website/img/core-img/s1.png' %}" alt="">
-                  <h6>Dental referral </h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-  </section>
-  <!-- Dento Service Area End -->
-
-  <!-- Dento Pricing Table Area Start -->
-  <section class="dento-pricing-table-area section-padding-100">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>Pricing</h2>
+      <div class="col-12 col-md-6">
+        <div class="about-us-content mb-50">
+          <div class="section-heading">
+            <h2>Our Mission</h2>
             <div class="line"></div>
           </div>
-        </div>
-      </div>
+          <p>At Polished, our mission is to provide high-level oral hygiene care to everyone. Oral health is directly associated with overall health. The population of patients who are not able to be seen in a dental office continues to grow — but access is no longer a barrier to good dental hygiene care.</p>
+          <p>*In a recent study involving community-dwelling seniors:</p>
 
-      <div class="row">
-        <div class="col-12">
-          <div class="dento-price-table table-responsive">
-            <table class="table table-borderless mb-0">
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Time</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                  <th scope="row">New Patient Appointment</th>
-                  <td>60 min</td>
-                  <td>$250.00</td>
-                </tr>
-                <tr>
-                  <th scope="row">Teeth Cleaning</th>
-                  <td>30-60 min</td>
-                  <td>$200.00</td>
-                </tr>
-                <tr>
-                  <th scope="row">Topical Fluoride Application</th>
-                  <td>15 min</td>
-                  <td>$50.00 *Free with cleaning</td>
-                </tr>
-                <tr>
-                  <th scope="row">Deep Cleaning </th>
-                  <td>60-90 min</td>
-                  <td>$250.00 *Per Half Mouth</td>
-                </tr>
-                <tr>
-                  <th scope="row">Denture Cleaning</th>
-                  <td>15-30 min</td>
-                  <td>$50.00 *Free with cleaning</td>
-                </tr>
-                <tr>
-                  <th scope="row">Silver Diammine Fluoride</th>
-                  <td>TBD</td>
-                  <td>$50.00 per application</td>
-                </tr>
-                <tr>
-                  <th scope="row">Oral Hygiene Assessment</th>
-                  <td>30 min</td>
-                  <td>$100.00 *Free with cleaning</td>
-                </tr>
-                <tr>
-                  <th scope="row">Oral Cancer Screening</th>
-                  <td>15 min</td>
-                  <td>Free with any service</td>
-                </tr>
-                <tr>
-                  <th scope="row">Patient Specific Oral Hygiene Instruction</th>
-                  <td>15 min</td>
-                  <td>Free with any service</td>
-                </tr>
-
-              </tbody>
-            </table>
+          <div class="single-skills-area mt-30">
+            <h6>Untreated Tooth Decay</h6>
+            <div id="bar1" class="barfiller"><span class="tip"></span><span class="fill" data-percentage="32"></span></div>
           </div>
-        </div>
-  </section>
 
-   <!--        <div class="col-12">
-          <div class="more-btn text-center mt-50">
-            <a href="#" class="btn dento-btn">Read More <i class="fa fa-angle-double-right"></i></a>
+          <div class="single-skills-area mt-30">
+            <h6>1–6 Remaining Natural Teeth</h6>
+            <div id="bar3" class="barfiller"><span class="tip"></span><span class="fill" data-percentage="6.8"></span></div>
           </div>
+
+          <div class="single-skills-area mt-30">
+            <h6>Untreated Gum Disease</h6>
+            <div id="bar2" class="barfiller"><span class="tip"></span><span class="fill" data-percentage="65"></span></div>
+          </div>
+
+          <p>*Source: centerfororalhealth.org</p>
         </div>
       </div>
     </div>
-  </section>
-Dento Pricing Table Area End -->
+  </div>
+</section>
+<!-- ***** About Us Area End ***** -->
 
-  <!-- Book An Oppointment Area Start -->
-  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center white">
-            <h2>Book An Apointment</h2>
-            <div class="line"></div>
-          </div>
+<!-- ***** Cool Facts Area Start ***** -->
+<section class="dento-cta-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single-cta text-center mt-50 mb-100 mb-sm-50">
+          <i class="icon_genius"></i>
+          <h2><span class="counter">10</span></h2>
+          <h5>Years Of Experience</h5>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-12">
-          <!-- Appointment Form -->
-          <div class="appointment-form">
-            <form action="{% url 'appointment' %}" method="post">
-              {% csrf_token %}
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-schedule" class="form-control">
-                      <option value="Choose Your Schedule">Choose Your Schedule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-date" class="form-control">
-                      <option value="Choose Your Date">Choose Your Date</option>
-                      <option value="Monday">Monday</option>
-                      <option value="Tuesday">Tuesday</option>
-                      <option value="Wednesday">Wednesday</option>
-                      <option value="Thursday">Thursday</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <button type="submit" class="btn dento-btn">Booking Now</button>
-                </div>
-              </div>
-            </form>
-          </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single-cta text-center mt-50 mb-100 mb-sm-50">
+          <i class="icon_heart_alt"></i>
+          <h2><span class="counter">1400</span>+</h2>
+          <h5>Happy Patients</h5>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single-cta text-center mt-50 mb-100 mb-sm-50">
+          <i class="icon_book_alt"></i>
+          <h2><span class="counter">240</span></h2>
+          <h5>Community Service Hours</h5>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single-cta text-center mt-50 mb-100 mb-sm-50">
+          <i class="icon_id"></i>
+          <h2><span class="counter">1840</span>+</h2>
+          <h5>Miles Traveled</h5>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Book An Oppointment Area End -->
+  </div>
+</section>
+<!-- ***** Cool Facts Area End ***** -->
 
-  <!-- ***** Dento Dentist Area Start ***** -->
-  <section class="dentist-area section-padding-100-0">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>The Polished Family</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="{% static 'website/img/bg-img/Polished_about2.png' %}" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5></h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="{% static 'website/img/bg-img/Polished_about1.png' %}" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5>Lindsey Williams</h5>
-                <p>Owner </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="{% static 'website/img/bg-img/430_2.png' %}" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5></h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
+<!-- ***** Book an Appointment Section (No Form) ***** -->
+<section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-heading text-center white">
+          <h2>Book an Appointment</h2>
+          <div class="line"></div>
+          <p class="text-white mt-3">To schedule your visit, please <a href="{% url 'contact' %}" class="text-white font-weight-bold">contact us</a> directly.</p>
         </div>
       </div>
     </div>
-  </section>
-  <!-- ***** Dento Dentist Area End ***** -->
+  </div>
+</section>
+<!-- ***** Book an Appointment Section End ***** -->
 
-  <!-- ***** Testimonials Area Start ***** -->
-  <section class="testimonials-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child2_BlackW.png' %});">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <!-- Testimonials Slides -->
-          <div class="testimonials-slides owl-carousel">
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="{% static 'website/img/bg-img/BJPalmer_150.png' %}" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“The preservation of health is easier than the cure of disease.”</h5>
-                <h6>BJ Palmer</h6>
-                <p></p>
-              </div>
-            </div>
+<!-- ***** Carousel Speed Script ***** -->
+<script>
+  $(document).ready(function(){
+    $(".welcome-slides").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 8000,     // ⏱ 8 seconds per slide
+      autoplayHoverPause: true,
+      smartSpeed: 1000,          // 🎞 1 second transition
+      dots: true,
+      nav: false
+    });
+  });
+</script>
 
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="{% static 'website/img/bg-img/DollyP_150.png' %}" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“If you see someone without a smile, give them one of yours.”</h5>
-                <h6>Dolly Parton</h6>
-                <p>Musician</p>
-              </div>
-            </div>
-
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="{% static 'website/img/bg-img/MotherT_150.png' %}" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“Its not how much we give, but how much love we put into giving.”</h5>
-                <h6>Mother Theresa</h6>
-                <p>GodMother</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Testimonials Area End ***** -->
-
-  <!-- ***** Blog Area Start ***** -->
-  <section class="dento-blog-area section-padding-100-0 clearfix">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>The Latest News</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Single Blog Item -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="single-blog-item mb-100">
-            <a href="https://www.nidcr.nih.gov/sites/default/files/2019-09/dry-mouth-and-older-adults.pdf">
-              <img src="{% static 'website/img/bg-img/drymouth.png' %}" alt="">
-            </a>
-            <!-- Blog Content -->
-            <div class="blog-content">
-              <a href="https://www.nidcr.nih.gov/sites/default/files/2019-09/dry-mouth-and-older-adults.pdf" class="post-title">DRY MOUTH & OLDER ADULTS</a>
-              <p>Dry mouth is the feeling that there is not enough saliva in the 
-              mouth. Common causes of dry mouth in older adults include 
-              side effects of certain medications and dehydration, when 
-              you lose more fluid than you take in.
-              </p>
-              <div class="post-meta">
-                <a href="#"><i class="icon_clock_alt"></i> 28 Sep 2018</a>
-                <a href="#"><i class="icon_chat_alt"></i> 3 Comments</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Blog Item -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="single-blog-item mb-100">
-            <a href="https://www.colgateprofessional.com/hygienist-resources/career-development/what-is-an-rdhap">
-              <img src="{% static 'website/img/bg-img/whatis.png' %}" alt="">
-            </a>
-            <!-- Blog Content -->
-            <div class="blog-content">
-              <a href="https://www.colgateprofessional.com/hygienist-resources/career-development/what-is-an-rdhap" class="post-title">What is an RDHAP?</a>
-              <p>To practice in settings outside a traditional dental office, a registered dental hygienist can pursue specialized training to obtain a specific license as a Registered Dental Hygienist in Alternative Practice (RDHAP)</p>
-              <div class="post-meta">
-                <a href="#"><i class="icon_clock_alt"></i> 1 Jan 2023</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Blog Item -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="single-blog-item mb-100">
-            <a href="https://www.nidcr.nih.gov/sites/default/files/2020-08/oral-health-aging-brushing.pdf">
-              <img src="{% static 'website/img/bg-img/blog3Image.png' %}" alt="">
-            </a>
-            <!-- Blog Content -->
-            <div class="blog-content">
-              <a href="https://www.nidcr.nih.gov/sites/default/files/2020-08/oral-health-aging-brushing.pdf" class="post-title">Oral Health & Aging</a>
-              <p>Information for Caregivers</p>
-              <div class="post-meta">
-                <a href="#"><i class="icon_clock_alt"></i> 1 Jan 2023</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Blog Area End ***** -->
-
- {% endblock %}
+{% endblock %}
