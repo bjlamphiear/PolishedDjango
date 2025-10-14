@@ -1,126 +1,59 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Contact Lindsey Williams RDHAP {% endblock %}
-{% block meta_description %} Contact Lindsey Williams RDHAP {% endblock %}
-{%block content %}
+{% block title %}Contact Lindsey Williams RDHAP{% endblock %}
+{% block meta_description %}Contact Lindsey Williams RDHAP{% endblock %}
+{% block content %}
 
+<!-- ***** Breadcrumb Area Start ***** -->
+<div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12">
+        <h2 class="title">Contact</h2>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
 
+<!-- ***** Contact Area Start ***** -->
+{% if message_name %}
+  <center>
+    <h2>Thank You {{ message_name }}!</h2>
+    <p>Your message has been received and Lindsey will be reaching out shortly...</p>
+  </center>
+  <br/><br/><br/>
+{% else %}
+<section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
+  <div class="container">
+    <div class="row">
+      <!-- Section Heading -->
+      <div class="col-12">
+        <div class="section-heading text-center white">
+          <h2>Send a Message</h2>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
 
-
-
-  <!-- ***** Breadcrumb Area Start ***** -->
-  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-12">
-          <h2 class="title">Contact</h2>
-            <div class="line"></div>
+    <div class="row">
+      <div class="col-12">
+        <!-- Contact Form -->
+        <div class="appointment-form">
+          <form action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="col-12 text-center">
+              <button type="submit" class="btn dento-btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  
-  <!-- ***** Breadcrumb Area End ***** -->
+</section>
+{% endif %}
+<!-- ***** Contact Area End ***** -->
 
-  <!-- ***** Contact Area Start ***** -->
-{% if message_name %}
-  <center>
-    <h2> Thank You {{ message_name }}!</h2>
-    <p> Your message has been recieved and Lindsey will be reaching out shortly... </p>
-  </center>
-  <br/><br/><br/>
-{% else %}
-      <!--
-  <section class="dento-contact-area mt-50 mb-100">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="google-maps mb-100">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13513.370941768942!2d-122.06821336459181!3d38.266745645744294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808516a48f56a4a3%3A0x230e0f50d9bab2fd!2s2928%20Hearst%20Ct%2C%20Fairfield%2C%20CA%2094534!5e0!3m2!1sen!2sus!4v1671806797778!5m2!1sen!2sus"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-
-
-<!-- Book An Oppointment Area Start -->
-  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'website/img/bg-img/Child3_BlackW.png' %});">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center white">
-            <h2></h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <!-- Appointment Form -->
-          <div class="appointment-form">
-            <form action="{% url 'appointment' %}" method="post">
-              {% csrf_token %}
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-schedule" class="form-control">
-                      <option value="Choose Your Schedule">Choose Your Schedule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-date" class="form-control">
-                      <option value="Choose Your Date">Choose Your Date</option>
-                      <option value="Monday">Monday</option>
-                      <option value="Tuesday">Tuesday</option>
-                      <option value="Wednesday">Wednesday</option>
-                      <option value="Thursday">Thursday</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <button type="submit" class="btn dento-btn">Submit</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {% endif %}
-  <!-- Book An Oppointment Area End -->
-
-  {% endblock %}
+{% endblock %}
