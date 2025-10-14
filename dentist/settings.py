@@ -1,13 +1,11 @@
 import os
 from pathlib import Path
-from decouple import Config, RepositoryEnv
+from decouple import config
 import django_heroku
 import dj_database_url
 
-# ✅ Load .env explicitly
+# ✅ Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
-ENV_FILE = BASE_DIR.parent / '.env'  # Moves up one level to Website/.env
-config = Config(RepositoryEnv(str(ENV_FILE)))
 
 # ✅ Core settings
 SECRET_KEY = config('SECRET_KEY')
@@ -34,7 +32,7 @@ INSTALLED_APPS = [
 # ✅ Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Must be early
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
