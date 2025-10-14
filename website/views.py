@@ -16,12 +16,16 @@ def pricing(request):
 def service(request):
     return render(request, 'service.html')
 
-# ✅ Contact form with validation
+# ✅ Contact form with reCAPTCHA debug logging
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
+
+            # ✅ Log reCAPTCHA result
+            print("✅ reCAPTCHA cleaned_data['captcha']:", cd.get('captcha'))
+
             send_mail(
                 subject=cd['name'],
                 message=cd['message'],
@@ -33,6 +37,9 @@ def contact(request):
                 'form': ContactForm(),  # Reset form after success
                 'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
             })
+        else:
+            # ✅ Log form errors
+            print("❌ Contact form errors:", form.errors)
     else:
         form = ContactForm()
 
@@ -75,6 +82,7 @@ def appointment(request):
                 'your_message': cd['your_message'],
             })
         else:
+            print("❌ Appointment form errors:", form.errors)
             return render(request, 'appointment.html', {
                 'form': form,
                 'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
