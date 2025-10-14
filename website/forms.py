@@ -1,6 +1,6 @@
 from django import forms
 from django_recaptcha.fields import ReCaptchaField
-from django_recaptcha.widgets import ReCaptchaV2Checkbox
+from django_recaptcha.widgets import ReCaptchaV3
 
 # ✅ Appointment Form
 class AppointmentForm(forms.Form):
@@ -31,9 +31,9 @@ class AppointmentForm(forms.Form):
     your_message = forms.CharField(required=False, widget=forms.Textarea(attrs={
         'class': 'form-control', 'placeholder': 'Your Message'
     }))
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
+    captcha = ReCaptchaField(widget=ReCaptchaV3)
 
-# ✅ Contact Form with reCAPTCHA
+# ✅ Contact Form
 class ContactForm(forms.Form):
     name = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control', 'placeholder': 'Your Name'
@@ -44,4 +44,4 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(attrs={
         'class': 'form-control', 'placeholder': 'Your Message'
     }))
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox)
+    captcha = ReCaptchaField(widget=ReCaptchaV3)
