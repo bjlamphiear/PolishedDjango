@@ -137,8 +137,12 @@
 
 <!-- ***** Carousel Speed Override Script ***** -->
 <script>
-  setTimeout(function() {
-    $(".welcome-slides").owlCarousel({
+  window.onload = function() {
+    const $carousel = $(".welcome-slides");
+    if ($carousel.data('owl.carousel')) {
+      $carousel.trigger('destroy.owl.carousel');
+    }
+    $carousel.owlCarousel({
       items: 1,
       loop: true,
       autoplay: true,
@@ -148,7 +152,7 @@
       dots: true,
       nav: false
     });
-  }, 500); // Delay to override theme defaults
+  };
 </script>
 
 {% endblock %}
