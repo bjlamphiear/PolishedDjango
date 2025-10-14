@@ -41,12 +41,11 @@
       <div class="col-12">
         <!-- Contact Form -->
         <div class="appointment-form">
-          <form action="{% url 'contact' %}" method="post">
+          <form id="contact-form" action="{% url 'contact' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="hidden" name="captcha" id="id_captcha">
             <div class="col-12 text-center">
-              <button type="submit" class="btn dento-btn">Submit</button>
+              <button type="submit" class="btn dento-btn" onclick="return injectToken()">Submit</button>
             </div>
           </form>
         </div>
@@ -58,11 +57,18 @@
 <!-- reCAPTCHA v3 Script -->
 <script src="https://www.google.com/recaptcha/api.js?render={{ RECAPTCHA_PUBLIC_KEY }}"></script>
 <script>
-  grecaptcha.ready(function() {
-    grecaptcha.execute('{{ RECAPTCHA_PUBLIC_KEY }}', {action: 'submit'}).then(function(token) {
-      document.getElementById('id_captcha').value = token;
+  function injectToken() {
+    grecaptcha.ready(function() {
+      grecaptcha.execute('{{ RECAPTCHA_PUBLIC_KEY }}', {action: 'submit'}).then(function(token) {
+        const captchaInput = document.getElementById('id_captcha');
+        if (captchaInput) {
+          captchaInput.value = token;
+          document.getElementById('contact-form').submit();
+        }
+      });
     });
-  });
+    return false; // prevent default submit until token is injected
+  }
 </script>
 {% endif %}
 <!-- ***** Contact Area End ***** -->
