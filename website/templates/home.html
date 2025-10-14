@@ -134,5 +134,30 @@
   </div>
 </section>
 <!-- ***** Book an Appointment Section End ***** -->
+<script>
+  window.addEventListener('load', function () {
+    const $carousel = $('.welcome-slides');
+
+    // Wait until Owl Carousel is initialized
+    if ($carousel.data('owl.carousel')) {
+      $carousel.trigger('destroy.owl.carousel');
+    }
+
+    // Reinitialize with your settings
+    $carousel.owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 8000,     // ✅ 8 seconds per slide
+      autoplayHoverPause: true,
+      smartSpeed: 1000,          // ✅ 1 second transition
+      nav: true,
+      navText: ["<i class='ti-angle-left'></i>", "<i class='ti-angle-right'></i>"],
+      dots: true,
+      animateIn: 'fadeIn',
+      animateOut: 'fadeOut'
+    });
+  });
+</script>
 
 {% endblock %}
