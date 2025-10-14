@@ -5,7 +5,7 @@
 
 <!-- ***** Welcome Area Start ***** -->
 <section class="welcome-area">
-  <div class="welcome-slides owl-carousel">
+  <div class="welcome-slides owl-carousel" data-owl-autoplay="true" data-owl-autoplay-timeout="8000" data-owl-smart-speed="1000">
     <!-- Slide 1 -->
     <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'website/img/bg-img/Dental1_BlackW.png' %});">
       <div class="container h-100">
@@ -134,18 +134,5 @@
   </div>
 </section>
 <!-- ***** Book an Appointment Section End ***** -->
-
-<!-- ***** Carousel Speed Override Script ***** -->
-<script>
-  $(document).ready(function(){
-    const $carousel = $(".welcome-slides");
-    if ($carousel.data('owl.carousel')) {
-      $carousel.trigger('refresh.owl.carousel');
-      $carousel.trigger('stop.owl.autoplay');
-      $carousel.owlCarousel('options').autoplayTimeout = 8000; // ⏱ 8 seconds
-      $carousel.trigger('play.owl.autoplay');
-    }
-  });
-</script>
 
 {% endblock %}
