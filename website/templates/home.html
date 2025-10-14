@@ -137,22 +137,15 @@
 
 <!-- ***** Carousel Speed Override Script ***** -->
 <script>
-  window.onload = function() {
+  $(document).ready(function(){
     const $carousel = $(".welcome-slides");
     if ($carousel.data('owl.carousel')) {
-      $carousel.trigger('destroy.owl.carousel');
+      $carousel.trigger('refresh.owl.carousel');
+      $carousel.trigger('stop.owl.autoplay');
+      $carousel.owlCarousel('options').autoplayTimeout = 8000; // ⏱ 8 seconds
+      $carousel.trigger('play.owl.autoplay');
     }
-    $carousel.owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 8000,     // ⏱ 8 seconds per slide
-      autoplayHoverPause: true,
-      smartSpeed: 1000,          // 🎞 1 second transition
-      dots: true,
-      nav: false
-    });
-  };
+  });
 </script>
 
 {% endblock %}
