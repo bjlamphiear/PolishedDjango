@@ -21,45 +21,50 @@
   }
 
   // ***********************************
-  // :: 3.0 Welcome Carousel Active Code
-  // ***********************************
+// :: 3.0 Welcome Carousel Active Code
+// ***********************************
 
-  if($.fn.owlCarousel) {
-    var welcomeSlider = $('.welcome-slides');
-    welcomeSlider.owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      smartSpeed: 1000,
-      nav: true,
-      navText: ["<i class='ti-angle-left'</i>", "<i class='ti-angle-right'</i>"],
-      dots: true,
-      animateIn: 'fadeIn',
-      animateOut: 'fadeOut'
-    })
-    welcomeSlider.on('translate.owl.carousel', function() {
-      var layer = $("[data-animation]");
-      layer.each(function() {
-        var anim_name = $(this).data('animation');
-        $(this).removeClass('animated ' + anim_name).css('opacity', '0');
-      });
+if ($.fn.owlCarousel) {
+  var welcomeSlider = $('.welcome-slides');
+  welcomeSlider.owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 8000,       // ✅ 8 seconds per slide
+    smartSpeed: 1000,            // ✅ 1 second transition
+    nav: true,
+    navText: ["<i class='ti-angle-left'</i>", "<i class='ti-angle-right'</i>"],
+    dots: true,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  });
+
+  welcomeSlider.on('translate.owl.carousel', function () {
+    var layer = $("[data-animation]");
+    layer.each(function () {
+      var anim_name = $(this).data('animation');
+      $(this).removeClass('animated ' + anim_name).css('opacity', '0');
     });
-    $("[data-delay]").each(function() {
-      var anim_del = $(this).data('delay');
-      $(this).css('animation-delay', anim_del);
+  });
+
+  $("[data-delay]").each(function () {
+    var anim_del = $(this).data('delay');
+    $(this).css('animation-delay', anim_del);
+  });
+
+  $("[data-duration]").each(function () {
+    var anim_dur = $(this).data('duration');
+    $(this).css('animation-duration', anim_dur);
+  });
+
+  welcomeSlider.on('translated.owl.carousel', function () {
+    var layer = welcomeSlider.find('.owl-item.active').find("[data-animation]");
+    layer.each(function () {
+      var anim_name = $(this).data('animation');
+      $(this).addClass('animated ' + anim_name).css('opacity', '1');
     });
-    $("[data-duration]").each(function() {
-      var anim_dur = $(this).data('duration');
-      $(this).css('animation-duration', anim_dur);
-    });
-    welcomeSlider.on('translated.owl.carousel', function() {
-      var layer = welcomeSlider.find('.owl-item.active').find("[data-animation]");
-      layer.each(function() {
-        var anim_name = $(this).data('animation');
-        $(this).addClass('animated ' + anim_name).css('opacity', '1');
-      });
-    });
-  }
+  });
+}
 
   // **************************************
   // :: 4.0 Testimonials Slides Active Code
