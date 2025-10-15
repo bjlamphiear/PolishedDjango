@@ -1,135 +1,122 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Pricing for Polished services - Lindsey Williams RDHAP {% endblock %}
-{% block meta_description %} Find our current prices for all Polished services  {% endblock %}
-{%block content %}
+{% block meta_description %} Find our current prices for all Polished services {% endblock %}
+{% block content %}
 
+<!-- ***** Breadcrumb Area Start ***** -->
+<div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12">
+        <h2 class="title">Our Pricing</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="breadcumb--con">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Our Pricing</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
 
-  <!-- ***** Breadcrumb Area Start ***** -->
-  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'website/img/bg-img/12.jpg' %});">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-12">
-          <h2 class="title">Our Pricing</h2>
+<!-- ***** Blurb Area Start ***** -->
+<section class="dento-blog-area section-padding-100 clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>Polished wants everyone to receive teeth cleanings without insurance limitations. Most dental insurance companies do not recognize RDHAPs as providers, limiting patients on what treatment can be received and who can treat them. At Polished, we feel everyone has a right to see anyone for treatment, anywhere, so we are a fee-for-service practice offering affordable pricing to patients and their families. Please see below for basic pricing or reach out if you have any additional questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ***** Pricing Table Area Start ***** -->
+<section class="dento-pricing-table-area section-padding-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-heading text-center">
+          <h2>Pricing</h2>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="dento-price-table table-responsive">
+          <table class="table table-borderless mb-0">
+            <thead>
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">Time</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">New Patient Appointment</th>
+                <td>60 min</td>
+                <td>$250.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Teeth Cleaning</th>
+                <td>30–60 min</td>
+                <td>$200.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Topical Fluoride Application</th>
+                <td>15 min</td>
+                <td>$50.00 <small>*Free with cleaning</small></td>
+              </tr>
+              <tr>
+                <th scope="row">Deep Cleaning</th>
+                <td>60–90 min</td>
+                <td>$250.00 <small>*Per Half Mouth</small></td>
+              </tr>
+              <tr>
+                <th scope="row">Denture Cleaning</th>
+                <td>15–30 min</td>
+                <td>$50.00 <small>*Free with cleaning</small></td>
+              </tr>
+              <tr>
+                <th scope="row">Silver Diamine Fluoride</th>
+                <td>TBD</td>
+                <td>$50.00 per application</td>
+              </tr>
+              <tr>
+                <th scope="row">Oral Hygiene Assessment</th>
+                <td>30 min</td>
+                <td>$100.00 <small>*Free with cleaning</small></td>
+              </tr>
+              <tr>
+                <th scope="row">Oral Cancer Screening</th>
+                <td>15 min</td>
+                <td>Free with any service</td>
+              </tr>
+              <tr>
+                <th scope="row">Patient-Specific Oral Hygiene Instruction</th>
+                <td>15 min</td>
+                <td>Free with any service</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
-  <div class="breadcumb--con">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Our Pricing</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Breadcrumb Area End ***** -->
-  <!-- ***** Blurp Area Start ***** -->
-  <section class="dento-blog-area section-padding-100-0 clearfix">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="col-12">
-            <p>Polished wants everyone to receive teeth cleanings with out insurance limitations. Most dental insurance companies do not recognize RDHAP's as providers, therefore limiting their patients on what treatment can be received and who can treat them. At Polished, we feel everyone has a right to see anyone for treatment,  anywhere, so we are a fee for service practice. Offering affordable pricing to patients and their families. Please see below for basic pricing or reach out if you have any additional questions.</p>
-            <div class="col-12"></div>
-          </div>
-        </div>
-      </div>
-   <!-- Dento Pricing Table Area Start -->
-  <section class="dento-pricing-table-area section-padding-100">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>Pricing</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <div class="dento-price-table table-responsive">
-            <table class="table table-borderless mb-0">
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Time</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                  <th scope="row">New Patient Appointment</th>
-                  <td>60 min</td>
-                  <td>$250.00</td>
-                </tr>
-                <tr>
-                  <th scope="row">Teeth Cleaning</th>
-                  <td>30-60 min</td>
-                  <td>$200.00</td>
-                </tr>
-                <tr>
-                  <th scope="row">Topical Fluoride Application</th>
-                  <td>15 min</td>
-                  <td>$50.00 *Free with cleaning</td>
-                </tr>
-                <tr>
-                  <th scope="row">Deep Cleaning </th>
-                  <td>60-90 min</td>
-                  <td>$250.00 *Per Half Mouth</td>
-                </tr>
-                <tr>
-                  <th scope="row">Denture Cleaning</th>
-                  <td>15-30 min</td>
-                  <td>$50.00 *Free with cleaning</td>
-                </tr>
-                <tr>
-                  <th scope="row">Silver Diammine Fluoride</th>
-                  <td>TBD</td>
-                  <td>$50.00 per application</td>
-                </tr>
-                <tr>
-                  <th scope="row">Oral Hygiene Assessment</th>
-                  <td>30 min</td>
-                  <td>$100.00 *Free with cleaning</td>
-                </tr>
-                <tr>
-                  <th scope="row">Oral Cancer Screening</th>
-                  <td>15 min</td>
-                  <td>Free with any service</td>
-                </tr>
-                <tr>
-                  <th scope="row">Patient Specific Oral Hygiene Instruction</th>
-                  <td>15 min</td>
-                  <td>Free with any service</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-        </div>
-  </section>
- <!--
-        <div class="col-12">
-          <div class="more-btn text-center mt-50">
-            <a href="#" class="btn dento-btn">Read More <i class="fa fa-angle-double-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-Dento Pricing Table Area End -->
-
-  <!-- ***** Dento Pricing Table Area End ***** -->
-
-
+</section>
+<!-- ***** Pricing Table Area End ***** -->
 
 {% endblock %}
