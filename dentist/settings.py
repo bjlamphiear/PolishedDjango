@@ -104,6 +104,26 @@ SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
+# Trust the X-Forwarded-Proto header set by Heroku's router so that
+# request.is_secure() returns True behind the proxy.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# HSTS — tell browsers to use HTTPS only for the next year.
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Misc hardening
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = 'same-origin'
+X_FRAME_OPTIONS = 'DENY'
+
+# Origins allowed to submit forms (Django 4+ requires this for CSRF over HTTPS).
+CSRF_TRUSTED_ORIGINS = config(
+    'CSRF_TRUSTED_ORIGINS',
+    default='https://polishedrdhap.com,https://www.polishedrdhap.com',
+).split(',')
+
 # ✅ Default primary key
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

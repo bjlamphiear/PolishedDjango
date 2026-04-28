@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+/staticfiles/
+/media/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Virtual envs
+venv/
+venv*/
+.venv/
+env/
+virtual/
+
+# SCSS build artifacts
+.sass-cache/
+*.scssc
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Heroku
+.heroku/

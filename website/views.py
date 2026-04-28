@@ -1,45 +1,60 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.conf import settings
-from .forms import ContactForm, AppointmentForm  # ✅ Import both forms
+from .forms import ContactForm, AppointmentForm
 
-# ✅ Static pages
+# Recipients for all form submissions
+NOTIFICATION_RECIPIENTS = ['bjlamphiear@gmail.com', 'linzymae84@gmail.com']
+
+
+def _strip_header(value):
+    """Strip CR/LF from any user-supplied value used in email headers
+    to prevent email-header injection."""
+    if value is None:
+        return ''
+    return str(value).replace('\r', ' ').replace('\n', ' ').strip()
+
+
+# Static pages
 def home(request):
     return render(request, 'home.html')
+
 
 def about(request):
     return render(request, 'about.html')
 
+
 def pricing(request):
     return render(request, 'pricing.html')
+
 
 def service(request):
     return render(request, 'service.html')
 
-# ✅ Contact form with reCAPTCHA debug logging
+
+# Contact form
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
+            visitor_name = _strip_header(cd['name'])
+            visitor_email = _strip_header(cd['email'])
 
-            # ✅ Log reCAPTCHA result
-            print("✅ reCAPTCHA cleaned_data['captcha']:", cd.get('captcha'))
-
-            send_mail(
-                subject=cd['name'],
-                message=cd['message'],
-                from_email=cd['email'],
-                recipient_list=['bjlamphiear@gmail.com', 'linzymae84@gmail.com'],
+            email = EmailMessage(
+                subject=f"New contact form message from {visitor_name}",
+                body=f"From: {visitor_name} <{visitor_email}>\n\n{cd['message']}",
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=NOTIFICATION_RECIPIENTS,
+                reply_to=[visitor_email],
             )
+            email.send(fail_silently=False)
+
             return render(request, 'contact.html', {
                 'message_name': cd['name'],
-                'form': ContactForm(),  # Reset form after success
+                'form': ContactForm(),
                 'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
             })
-        else:
-            # ✅ Log form errors
-            print("❌ Contact form errors:", form.errors)
     else:
         form = ContactForm()
 
@@ -48,29 +63,34 @@ def contact(request):
         'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
     })
 
-# ✅ Appointment form with reCAPTCHA and review page
+
+# Appointment form
 def appointment(request):
     if request.method == "POST":
         form = AppointmentForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
+            visitor_name = _strip_header(cd['your_name'])
+            visitor_email = _strip_header(cd['your_email'])
 
             appointment_details = (
-                f"Name: {cd['your_name']}\n"
+                f"Name: {visitor_name}\n"
                 f"Phone: {cd['your_phone']}\n"
-                f"Email: {cd['your_email']}\n"
+                f"Email: {visitor_email}\n"
                 f"Address: {cd['your_address']}\n"
-                f"Date: {cd['your_date']}\n"
+                f"Day: {cd['your_date']}\n"
                 f"Time: {cd['your_schedule']}\n"
                 f"Message: {cd['your_message']}"
             )
 
-            send_mail(
-                subject='Polished Appointment Request',
-                message=appointment_details,
-                from_email=cd['your_email'],
-                recipient_list=['bjlamphiear@gmail.com', 'linzymae84@gmail.com'],
+            email = EmailMessage(
+                subject=f"Polished appointment request from {visitor_name}",
+                body=appointment_details,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=NOTIFICATION_RECIPIENTS,
+                reply_to=[visitor_email],
             )
+            email.send(fail_silently=False)
 
             return render(request, 'review.html', {
                 'your_name': cd['your_name'],
@@ -82,7 +102,6 @@ def appointment(request):
                 'your_message': cd['your_message'],
             })
         else:
-            print("❌ Appointment form errors:", form.errors)
             return render(request, 'appointment.html', {
                 'form': form,
                 'RECAPTCHA_PUBLIC_KEY': settings.RECAPTCHA_PUBLIC_KEY,
